@@ -1,6 +1,6 @@
 # Data model and proposed contracts
 
-These are design sketches, not implemented endpoints or final migration definitions. API names and payloads require review with MediFlow, MedPass and KernelBridge owners. Clinical content and secrets are intentionally absent from examples.
+Except for the synthetic-only management API and gated operational-sync implementation documented in the [offline sync checkpoint](05-offline-sync.md), these are design sketches, not implemented endpoints or final migration definitions. API names and payloads require review with MediFlow, MedPass and KernelBridge owners. Clinical content and secrets are intentionally absent from examples.
 
 ## Core entities
 
@@ -38,7 +38,7 @@ Every tenant-owned table includes tenant scope, appropriate foreign keys, indexe
 }
 ```
 
-Define canonicalization and maximum bytes before implementation; do not treat a hash as authentication. Tenant comes from authenticated installation binding, not a trusted client-supplied tenant value. An acknowledgement includes event ID, accepted/duplicate/rejected status, stable error code and correlation ID. The server persists dedupe and accepted effect atomically. Duplicate ID with another hash is an error, never a successful duplicate.
+The gated operational-only implementation currently sends one event per request: `event_id`, `sequence`, `occurred_at`, `payload_json` and `payload_sha256`. The payload is compact JSON, limited to 4096 bytes and strictly limited to version, pending and failed counts, and enabled module names. Tenant and installation come from the separate sync credential, never from a client-supplied tenant. Successful acknowledgements contain the event ID and `accepted` or `duplicate`; rejections use a stable error code. This implementation is synthetic-only, does not yet include correlation IDs or batch/partial acknowledgements, and is not the general clinical-sync contract illustrated above.
 
 ## Proposed API surfaces
 

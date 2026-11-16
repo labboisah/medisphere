@@ -1,0 +1,14 @@
+.onboarding-page { min-height: 100vh; padding: 2rem 1rem; background: #f5f8f2; }
+.onboarding-card { max-width: 860px; margin: auto; padding: clamp(1.25rem, 4vw, 2.5rem); background: white; border: 1px solid #dce8df; border-radius: 1rem; }
+.onboarding-header { display: flex; align-items: center; gap: 1rem; }
+.onboarding-header h1 { margin: .25rem 0; }
+.onboarding-kicker { color: #426d60; font-size: .75rem; font-weight: 700; letter-spacing: .08em; }
+.onboarding-form { display: grid; gap: 1.25rem; margin-top: 1.5rem; }
+.onboarding-form fieldset { border: 1px solid #dce8df; border-radius: .75rem; padding: 1rem; min-width: 0; }
+.onboarding-form legend { font-weight: 700; padding: 0 .4rem; }
+.onboarding-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 1rem; }
+.onboarding-field { display: grid; gap: .4rem; font-weight: 600; }
+.onboarding-field input, .onboarding-field select { width: 100%; padding: .7rem; border: 1px solid #aebfb4; border-radius: .4rem; background: white; color: inherit; }
+.onboarding-check { display: flex; align-items: flex-start; gap: .6rem; margin-top: 1rem; }
+.onboarding-check input { flex: 0 0 auto; margin-top: .3rem; }
+.onboarding-footer, .onboarding-pagination { display: flex; gap: 1rem; align-items: center; margin-top: 1.5rem; }

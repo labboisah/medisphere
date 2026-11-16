@@ -24,6 +24,10 @@ KernelBridge remains authoritative for plans, effective entitlements, expiration
 
 **Existing MediFlow caveat:** the local licensing pilot documents direct installation activation and says platform-account broker/outbox delivery is out of scope. Platform-linked installation issuance must be designed and tested; do not assume the existing direct flow already implements it. Preserve existing installations and ask for an approved migration/rebinding plan.
 
+Code-only server enrollment issues a short-lived, single-use code tied to the organization account; the server binds its own identity when exchanging the code, and its entitlement follows the license and subscription validity. The Servers page displays account-bound activations from KernelBridge as a live, read-only list. Facility assignment, a persisted Platform inventory, individual management of code-only activations in the Platform, and authenticated operational health sync are not implemented. A license verification timestamp is not a health heartbeat; do not assume a server is synchronizing merely because activation succeeded.
+
+New server enrollment codes are encrypted in the Platform database and may be revealed by authorized server managers before expiry. The list does not reflect whether a code has been redeemed. Expired records require the scheduled cleanup described in [portal setup](portal-setup.md); codes issued before encrypted storage was introduced cannot be recovered.
+
 ## Entitlement examples
 
 Use a reviewed product catalog for stable capability identifiers and separately defined atomic usage enforcement. Possible capabilities: platform dashboard, MedPass exchange, facility registration, backup service and provider network. Candidate limits: active facilities, linked installations, storage bytes and user seats. These are **proposals**, not existing KernelBridge keys. Separate clinical authorization from paid feature entitlement: both must permit a sharing operation.

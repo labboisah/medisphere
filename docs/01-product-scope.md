@@ -51,6 +51,8 @@ Out of the initial scope: automatic patient matching/merging, bidirectional clin
 | Targets and hosting | Targets in this pack are initial engineering proposals, not contractual promises. | Product and operations: pilot scale, SLOs, region and budget. |
 | Stack | React + TypeScript frontend; Laravel API and workers. | Owner selected; confirm supported versions, hosting and authentication details at implementation and security review. |
 
+The updated final stakeholder acceptance records stakeholder approval for planned real patient-data exchange and authorizes continued full-system production-readiness engineering. Stakeholder approval does not by itself resolve the specific legal, clinical, hosting, identity, security, backup, partner, or release decisions above, or demonstrate that the system is ready for live exchange. Record those decisions and their supporting evidence before enabling the related production capability or processing real patient information.
+
 ## Success measures
 
 Use synthetic or aggregated operational data for measurement: percentage of enrolled servers reporting within expected window, oldest pending queue age, sync success and rejection rates, time to identify failures, verified backup restore rate, and patient-match exceptions. Define denominator, exclusions and targets before the pilot. Clinical outcomes require separately approved studies; do not infer them from sync counts.

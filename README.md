@@ -1,6 +1,8 @@
-# MediFlow Platform: product and implementation documentation
+# MediSphere Platform: product and implementation documentation
 
-This directory is the design workspace for a proposed hosted MediFlow Platform. It is **documentation only**: no application, infrastructure, integrations, or migrations have been implemented here.
+This directory is the design workspace and non-production foundation for the proposed hosted MediSphere Platform (formerly MediFlow Platform). Laravel lives at the project root, with the React portal integrated through Laravel Vite. Authentication, tenant management and licensing have synthetic/local implementations; production infrastructure and patient-data handling are not implemented. Existing MediFlow server names, licensing product codes, entitlement keys and integration identifiers remain unchanged.
+
+For local startup, build the assets with `npm run build` and run `php artisan serve` from this directory. See the [portal setup guide](docs/portal-setup.md) for hot reload and local configuration.
 
 The platform is intended to connect healthcare organizations and their MediFlow installations to licensing, operational monitoring, controlled MedPass exchange, backup coordination, and eventually a trusted provider network. Local healthcare operations remain on the facility server, including during internet outages.
 
@@ -19,6 +21,8 @@ The platform is intended to connect healthcare organizations and their MediFlow 
 11. [Data model and proposed contracts](docs/11-data-and-contracts.md)
 12. [Delivery, testing, and operations](docs/12-delivery-and-operations.md)
 13. [Implementation work packages and handoffs](docs/13-implementation-work-packages.md)
+14. [Implementation progress and checkpoints](docs/14-implementation-progress.md)
+15. [WP-0 approval record (approved for synthetic-data progression)](docs/MEDIPASS–MEDIFLOW%20INTEGRATION%20PROJECT.docx)
 
 ## Baseline and caveats
 
@@ -28,9 +32,9 @@ The platform is intended to connect healthcare organizations and their MediFlow 
 - Initial clinical exchange is a proposed pilot, subject to legal, clinical, operational and interoperability approval. FHIR support alone is not certification or proof of compatibility.
 - Sample URLs, keys, payloads, deadlines, limits and performance targets in these documents are proposals or placeholders. Do not copy secrets or patient data into these files.
 
-## Decisions requiring approval before implementation
+## Final stakeholder approval and production-readiness status
 
-See the [decision register](docs/01-product-scope.md#decision-register). In particular: jurisdiction and legal roles; the clinical data hosting model; identity matching and authorization; emergency and license-expiry policy; backup key custody; external partner trust; and final release/service-level targets.
+The updated [final stakeholder acceptance](docs/FINAL%20STAKEHOLDERS%20APPROVAL.docx) records stakeholder approval for planned real patient-data exchange. This approval does not establish that the system is ready for live exchange: production use remains blocked until technical, legal, clinical, security, and operational release evidence is complete. See the [implementation progress and remaining release evidence](docs/14-implementation-progress.md#remaining-release-evidence-and-controls) and the [decision register](docs/01-product-scope.md#decision-register).
 
 ## External reference standards
 

@@ -1,0 +1,6 @@
+.loading { display: flex; align-items: center; gap: 1rem; min-height: 4.5rem; padding: 1rem; border: 1px solid #e1ebe0; border-radius: 9px; background: #fff; color: #24543f; font-size: .9rem; font-weight: 650; }
+.loading-page { min-height: 100vh; flex-direction: column; justify-content: center; border: 0; border-radius: 0; background: #f5f8f5; }
+.loading-spinner { display: block; width: 2rem; height: 2rem; flex: none; border: 4px solid #d5e6d8; border-top-color: #337653; border-radius: 50%; animation: loading-spin .8s linear infinite; }
+.loading-page .loading-spinner { width: 3rem; height: 3rem; }
+@keyframes loading-spin { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { .loading-spinner { animation: none; } }
