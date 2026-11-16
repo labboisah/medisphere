@@ -20,13 +20,13 @@ return new class extends Migration
             $table->timestamp('reviewed_at')->nullable();
             $table->timestamps();
 
-            $table->foreign(['facility_id', 'organization_id'])
+            $table->foreign(['facility_id', 'organization_id'], 'sx_links_facility_org_fk')
                 ->references(['id', 'organization_id'])
                 ->on('facilities')
                 ->restrictOnDelete();
-            $table->unique(['facility_id', 'local_subject_reference']);
-            $table->unique(['id', 'organization_id', 'facility_id']);
-            $table->index(['organization_id', 'review_status', 'created_at']);
+            $table->unique(['facility_id', 'local_subject_reference'], 'sx_links_facility_subject_unique');
+            $table->unique(['id', 'organization_id', 'facility_id'], 'sx_links_id_org_facility_unique');
+            $table->index(['organization_id', 'review_status', 'created_at'], 'sx_links_org_review_created_idx');
         });
 
         Schema::create('synthetic_sharing_grants', function (Blueprint $table): void {
@@ -42,11 +42,14 @@ return new class extends Migration
             $table->timestamp('revoked_at')->nullable();
             $table->timestamps();
 
-            $table->foreign(['synthetic_exchange_link_id', 'organization_id', 'facility_id'])
+            $table->foreign(
+                ['synthetic_exchange_link_id', 'organization_id', 'facility_id'],
+                'sx_grants_link_org_facility_fk'
+            )
                 ->references(['id', 'organization_id', 'facility_id'])
                 ->on('synthetic_exchange_links')
                 ->restrictOnDelete();
-            $table->index(['organization_id', 'facility_id', 'expires_at']);
+            $table->index(['organization_id', 'facility_id', 'expires_at'], 'sx_grants_org_facility_expires_idx');
         });
     }
 
