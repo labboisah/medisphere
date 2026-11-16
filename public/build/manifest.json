@@ -1,0 +1,23 @@
+{
+  "resources/js/portal/assets/Figtree-Variable.ttf": {
+    "file": "assets/Figtree-Variable-nnuniQY3.ttf",
+    "src": "resources/js/portal/assets/Figtree-Variable.ttf"
+  },
+  "resources/js/portal/assets/welcome-healthcare-bg.png": {
+    "file": "assets/welcome-healthcare-bg-CU-ozwD5.png",
+    "src": "resources/js/portal/assets/welcome-healthcare-bg.png"
+  },
+  "resources/js/portal/main.tsx": {
+    "file": "assets/main-burpXGr1.js",
+    "name": "main",
+    "src": "resources/js/portal/main.tsx",
+    "isEntry": true,
+    "css": [
+      "assets/main-Bt0tz9Gb.css"
+    ],
+    "assets": [
+      "assets/Figtree-Variable-nnuniQY3.ttf",
+      "assets/welcome-healthcare-bg-CU-ozwD5.png"
+    ]
+  }
+}
