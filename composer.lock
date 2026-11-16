@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4eeae558109da8531b78afb3f4d4fb62",
+    "content-hash": "c98fe67f95311cd157125920d7d8103e",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -1214,11 +1214,17 @@
         },
         {
             "name": "kernelbridge/licensing-client-laravel",
-            "version": "1.2.3",
+            "version": "dev-laravel-package",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/labboisah/kernelbridge-license.git",
+                "reference": "12e752bca216c362f86f1d1f0e175e9787abe7a5"
+            },
             "dist": {
-                "type": "path",
-                "url": "../kernelbridge-license/packages/laravel",
-                "reference": "06afa7d0203526efadb0ec5f1c0dfc0b95623143"
+                "type": "zip",
+                "url": "https://api.github.com/repos/labboisah/kernelbridge-license/zipball/12e752bca216c362f86f1d1f0e175e9787abe7a5",
+                "reference": "12e752bca216c362f86f1d1f0e175e9787abe7a5",
+                "shasum": ""
             },
             "require": {
                 "laravel/framework": "^12.0 || ^13.0",
@@ -1255,9 +1261,11 @@
                 "proprietary"
             ],
             "description": "Reusable Laravel client for KernelBridge licensing, subscriptions and entitlements.",
-            "transport-options": {
-                "relative": true
-            }
+            "support": {
+                "source": "https://github.com/labboisah/kernelbridge-license/tree/laravel-package",
+                "issues": "https://github.com/labboisah/kernelbridge-license/issues"
+            },
+            "time": "2026-11-16T18:47:43+00:00"
         },
         {
             "name": "laravel/fortify",
@@ -10539,7 +10547,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {},
+    "stability-flags": {
+        "kernelbridge/licensing-client-laravel": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {

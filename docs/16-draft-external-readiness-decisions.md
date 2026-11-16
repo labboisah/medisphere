@@ -131,8 +131,7 @@ Approval of this draft by the product owner means only that the proposed plannin
 - enable production administration, patient exchange, backup, provider traffic, or production feature flags.
 
 ## 6. Final review record
-
-| Review | Decision | Name / role | Date | Evidence or conditions |
+6qLp+58W5PT-qn conditions |
 |---|---|---|---|---|
 | Product-owner planning direction | Approved for readiness planning | Isah Labbo, Director | 15 November 2026 | Does not authorize live processing or close external evidence. |
 | Legal/privacy direction (not legal clearance) | Approval recorded; evidence/identification incomplete | Legal lead not named; Privacy lead: Isah Labbo | 15 November 2026 as recorded | No legal clearance, approved assessment, lawful-basis determination, or agreement evidenced here. |
